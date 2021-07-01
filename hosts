@@ -1,0 +1,13 @@
+[ansible_servers]
+localhost ansible_connection=local ansible_user=root ansible_ssh_pass=Password1 ansible_become_pass=Password1
+
+[tftp_server]
+g1Tftp ansible_host=10.150.71.6 ansible_port=22 ansible_user=root ansible_ssh_pass=Password1 ansible_become_pass=Password1
+
+[windows]
+10.150.71.5
+[windows:vars]
+ansible_user=administrator
+ansible_password=Password1
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore

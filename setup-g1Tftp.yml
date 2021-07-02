@@ -1,0 +1,11 @@
+- hosts: localhost
+  become: true
+  roles:
+  -  ovatftp
+
+- hosts: tftp_server
+  become: true
+  roles:
+  -  tftp
+  -  nginx
+

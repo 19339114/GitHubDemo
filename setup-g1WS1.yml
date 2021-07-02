@@ -1,0 +1,10 @@
+- hosts: localhost
+  become: true
+  roles:
+  -  ovawindows
+
+- hosts: windows
+  roles:
+  -  windowsserver
+ 
+

@@ -1,0 +1,11 @@
+- hosts: localhost
+  pre_tasks:
+    - name: Check Ansible version.
+      assert:
+        that: "ansible_version.full is version_compare('2.9.9', '>=')"
+        msg: >
+          "This playbook has been tested on Ansible 2.9.9, please upgrade your Ansible install. This playbook may run on older versions however you will need to test it."
+- hosts: localhost
+  become: true
+  roles:
+  -  initialSetup
